@@ -16,9 +16,11 @@
 {{- end -}}
 
 {{if $cover -}}
-  <!-- Cover image found -->
+  <!-- Cover image found, but we still don't want to show it.
+       We're only using it for the open-graph image in the head.
   <img src="{{ $cover }}"
     class="post-cover"
     alt="{{ .Title | plainify | default " " }}"
     title="{{ .Params.CoverCredit |plainify|default "Cover Image" }}" />
+  -->
 {{- end }}
